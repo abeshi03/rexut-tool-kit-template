@@ -1,9 +1,11 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import countReducer from "../features/counter/countSlice";
+import taskReducer from "../features/task/taskSlice";
 
 export const store = configureStore({
   reducer: {
-    count: countReducer
+    count: countReducer,
+    task: taskReducer
   },
 });
 
