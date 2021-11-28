@@ -14,18 +14,19 @@ export const countSlice = createSlice<CountState, SliceCaseReducers<CountState>,
   name: "count",
   initialState,
   reducers: {
-    countUp: (state, action): void => {
+    countUp: (state): void => {
       state.countNumber ++;
     },
-    countDown: (state, action): void => {
+    countDown: (state): void => {
       state.countNumber --;
     },
-    countReset: (state, action): void => {
+    countReset: (state): void => {
       state.countNumber = 0;
     }
   }
 })
 
+export const { countUp, countDown, countReset } = countSlice.actions;
 
 export const selectCount = (state: RootState) => state.count.countNumber;
 
